@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+       
+        body {
+            background-color: chocolate;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            /* margin-left: 15px;
+            margin-right: 15px; */
+            position: relative;
+            margin-bottom: 15px;
+            
+        }
+
+
+        .MainImage{
+            width: 250px;
+            height: 200px;
+            object-fit: contain; 
+            justify-content: center;
+            
+        }
+         .thumbnail {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .thumbnail img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+            
+        }
+        .thumbnail:hover{
+            transition: 1s;
+            transform: scale(1.2);
+        }
+
+        .thumbnail:hover img{
+            object-fit: cover;
+
+            transform: scale(1.2);
+        }
+        .thumbnail img:hover{
+            transform: scale(1.2);
+            transition: 1s;
+        }
+        .NewDiv{
+            
+            display: none;
+            background-color: blue;
+            width: 800px;
+            height: 600px;
+            position: absolute;
+            margin-bottom: 30px;
+            z-index: 1;
+
+        }
+        .NewDiv:target{
+            display: block;
+        }
+        .Zoom{
+            top: 10%;
+            left: 10%;
+            position: absolute;
+            
+            
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+            
+        }
+
+        .ButtonReturn img{
+            height: 20px;
+            width: 20px;
+            padding:10px ;
+            float: right;
+        }
+        .Main-bar{
+            top: 0;
+            z-index: 1;
+            position: fixed;
+            width: 100%;
+            background-color: blue;
+            position: fixed;
+            height: 5%;
+        }
+        .Main-bar2{
+            display: block;
+            color: rgb(251, 251, 251);
+            position: absolute;
+            margin-bottom: 0px;
+           
+        }
+        li{
+            display: none;
+            padding-top: 10%;
+            background-color: blue;
+            color: white;
+            
+        }
+        .Main-bar:hover li{
+            display: block;
+        }
+        ul{
+            padding-left: 0px;
+        }
+        .button2{
+            display: none;
+            color: black;
+            background-color: blueviolet;
+        }
+        .butts{
+            display: none;
+            color: blue;
+            position: absolute;
+            margin-bottom: 0px;
+           
+        }
+
+        li{
+            background-color: blue;
+            color: white;
+            
+        }
+        .Main-bar:hover .butts{
+            display: block;
+        }
+        h1{
+            margin-top: 3%;
+        }
+    
+       
+    </style>
+</head>
+<body>
+    <div class="Main-bar">
+           
+        <span class="Main-bar2">
+            Menu
+        </span>
+        
+
+        <div class="Main-bar2">
+            <ul>
+                <li>
+                    <a href="index.html">HomePage</a>
+                </li>
+                
+                <li>
+                    <a href="ContactUs.html">Contact Us</a>
+                </li>
+                <li>
+                    <a href="CV.html">CV</a>
+                </li>
+            </ul>
+            
+
+        </div>
+       
+    </div>
+    <center id="FrontEnd" >
+        <h1>
+            Gallery
+        </h1>
+    </center>
+    
+    <div class="gallery">
+        <div class="thumbnail">
+            <a href="#zoom1" ><img src="Superman.jpg" class="MainImage" alt="Superman"></a>
+        </div>
+        <div class="NewDiv" id="zoom1"><img src="Superman.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+        <div class="thumbnail">
+            <a href="#zoom2" ><img src="hulk_vs__thor_by_nostalgicsuperfan_dg1ac2l-fullview.jpg" class="MainImage" alt="Superman"></a>
+            </div>
+            <div class="NewDiv" id="zoom2"><img src="hulk_vs__thor_by_nostalgicsuperfan_dg1ac2l-fullview.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+            <div class="thumbnail">
+                <a href="#zoom3" ><img src="captain-america-civil-war-airport-battle.jpg" class="MainImage" alt="Superman"></a>
+                </div>
+                <div class="NewDiv" id="zoom3"><img src="captain-america-civil-war-airport-battle.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+                <div class="thumbnail">
+                    <a href="#zoom4" ><img src="iron-man-vs-thanos-tz.jpg" class="MainImage" alt="Superman"></a>
+                    </div>
+                    <div class="NewDiv" id="zoom4"><img src="iron-man-vs-thanos-tz.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+                    <div class="thumbnail">
+                        <a href="#zoom5" ><img src="batmanVsSuperman.jpg" class="MainImage" alt="Superman"></a>
+                        </div>
+                        <div class="NewDiv" id="zoom5"><img src="batmanVsSuperman.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+                    <div class="thumbnail">
+                        <a href="#zoom6" ><img src="ironManrvscpa.jpg" class="MainImage" alt="Superman"></a>
+                        </div>
+                        <div class="NewDiv" id="zoom6"><img src="ironManrvscpa.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+                    <div class="thumbnail">
+                        <a href="#zoom7" ><img src="AimToTheHead.jpg" class="MainImage" alt="Superman"></a>
+                        </div>
+                        <div class="NewDiv" id="zoom7"><img src="AimToTheHead.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+                    
+    
+            </div>
+            <div class="gallery">
+                <div class="thumbnail">
+                    <a href="#zoom8" ><img src="thanos.jpg" class="MainImage" alt="Superman"></a>
+                </div>
+                    <div class="NewDiv" id="zoom8"><img src="thanos.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+                <div class="thumbnail">
+                    <a href="#zoom9" ><img src="EpicThanos.jpg" class="MainImage" alt="Superman"></a>
+                    </div>
+                    <div class="NewDiv" id="zoom9"><img src="EpicThanos.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+                <div class="thumbnail">
+                    <a href="#zoom10" ><img src="ThorMovie.jpg" class="MainImage" alt="Superman"></a>
+                    </div>
+                    <div class="NewDiv" id="zoom10"><img src="ThorMovie.jpg" class="Zoom"></a><a href="../Assigment1/Picture.html" class="ButtonReturn" ><img src="XXXXXXX.png" ></button></a></div>
+            </div>
+       
+        </div>
+        
+        
+    </div>
+</body>
+</html>
