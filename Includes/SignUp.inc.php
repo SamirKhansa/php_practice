@@ -41,7 +41,7 @@ if(isset($_POST["submit"])){
         "date"=> $date,
         "email"=> $email,
         "Sex"=> $Sex,
-        "password"=> $password
+        "password"=> $password.
     ];
     $inputvalues= file_get_contents("inputvalue.json");
     $inputvalues=json_decode($inputvalues,true);
